@@ -138,7 +138,7 @@ header{
 }
 header >h1 {
     text-shadow: 0px 5px 10px rgba(19, 104, 16, 0.363);/*sombra do fundo do texto*/
-    margin-bottom: 5px;
+    padding-bottom: 5px;
     
 }
 header > p {
