@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*
+link:css no aqrquivo html = cria esse arquivo style.css
+bod = corpo do site
+header = cabeçalho do site
+nav = menu do site
+nav>a = links do menu do site
+main = meio do site
+article = Conteúdo independente
+aside = Conteúdo complementar
+footer = rodapé do site
+*/
+
+/*
+ESTRUTURA DO HTML
+
+html = elemento raiz da página
+head = configurações e informações da página
+body = corpo visível do site
+
+header = cabeçalho da página ou de uma seção
+nav = área de navegação, geralmente com menus e links
+main = conteúdo principal da página
+article = conteúdo independente, como um artigo ou notícia
+section = seção temática de um conteúdo
+aside = conteúdo complementar relacionado ao conteúdo principal
+footer = rodapé da página ou de uma seção
+div = contêiner genérico para agrupar elementos
+target="_blank" abre em uma nova aba o link
+*/
+
+/*
+TEXTOS E TÍTULOS
+
+h1 até h6 = títulos de diferentes níveis
+p = parágrafo
+br = quebra de linha
+hr = separação temática entre conteúdos
+strong = indica importância, geralmente em negrito
+em = dá ênfase ao texto, geralmente em itálico
+
+LINKS E IMAGENS
+
+a = cria links
+img = exibe imagens
+figure = agrupa conteúdo ilustrativo, como uma imagem
+figcaption = legenda de uma imagem ou ilustração
+
+LISTAS
+
+ul = lista não ordenada
+ol = lista ordenada
+li = item de uma lista
+
+TABELAS
+
+table = tabela
+tr = linha da tabela
+th = célula de cabeçalho
+td = célula de dados
+thead = grupo do cabeçalho da tabela
+tbody = grupo do corpo da tabela
+tfoot = grupo do rodapé da tabela
+
+FORMULÁRIOS
+
+form = formulário
+label = rótulo de um campo
+input = campo de entrada
+textarea = campo de texto com várias linhas
+select = lista de opções
+option = opção de uma lista
+button = botão
+
+MULTIMÍDIA
+
+audio = áudio
+video = vídeo
+source = fonte de mídia
+iframe = incorpora outro documento ou conteúdo externo
+*/
+
+
+/* para realizar uma definição global no site, como margens por exemplo, em css use:
+
+*{
+margin: 0px;
+padding:0px;
+}
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Kaushan+Script&display=swap'); /*fonte atraves de link*/
+
+@font-face {
+    font-family: 'Android';
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+} /*fonte atraves de uma pasta arquivo*/
+
+
+:root{ /* Define variáveis globais para guardar as cores usadas no site */
+    --cor0:white;
+    --cor1:#defde3;
+    --cor2:#90daba;
+/* exemplo de utilização
+
+background-color: var(--cor1);
+}
+
+h1 {
+    color: var(--cor2);
+} */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android', sans-serif;
+
+}
+
+
+body{
+    font-family: var(--fonte-padrao); /*fonte principal do site*/
+    background-color: #defde3;/*cor fundo pricipal do site*/
+    margin: 0px; /*margem do site*/
+}
+header{
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right, #0b835b,#99d4a3,#90daba);/*cor fundo gradiente do cabeçalho*/
+    color: white; /*cor fonte cabeçalho*/
+    min-height: 150px; /*altura minima*/
+    margin: 0px;/*margem do cabeçalho*/
+    text-align: center; /*alinhamento do texto no cabeçalho*/
+    font-size: 17px; /*tamanho da fonte no cabeçalho*/
+    padding: 33px 33px 10px; /*espaçamento interno do cabeçalho*/
+    box-shadow: 0px 5px 10px rgba(114, 173, 112, 0.61);/*sombra do cabeçalho*/
+}
+header >h1 {
+    text-shadow: 0px 5px 10px rgba(19, 104, 16, 0.363);/*sombra do fundo do texto*/
+    margin-bottom: 5px;
+    
+}
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 13px; /* Define o tamanho da fonte dos parágrafos dentro do cabeçalho */
+    margin-top: 0px;
+    margin-bottom: 30px;
+    
+}
+nav{
+    background-color: var(--cor2);
+    font-family: var(--fonte-padrao);
+    font-size: 12px;
+    text-align-last: left; /*alinhamento do texto do menu*/
+    padding: 10px 20px;/*espaçamento interno do menu*/
+    margin: 45px -33px -10px;
+}
+
+nav>a{
+    text-decoration: none; /*remove o sublinhado do menu*/
+    color: rgb(255, 255, 255);/*cor fonte menu*/
+    font-weight: bold;/*estilo da fonte do menu, neste caso negrito*/
+    margin-right: 30px;/*espaçamento entre as palavras do menu*/
+    text-shadow: 0px 5px 10px rgba(19, 104, 16, 0.363);/*sombra do fundo do texto*/
+}
+
+nav > a:hover{
+        color: rgb(33, 124, 73);
+}
+
+main{
+    background-color: white;/*cor fundo conteudo do meio do site*/
+    padding: 33px;/*espaçamento interno do meio do site*/
+    margin: 0px 80px;/*margem do meio do site*/
+    margin-bottom: 30px; /*margem do final */
+    box-shadow: 5px 5px 8px 8px rgba(114, 173, 112, 0.164);/*sombra do do meio do site*/
+    border-bottom-left-radius: 10px;/*apenas bordas inferiores arrendondadas*/
+    border-bottom-right-radius: 10px;/*apenas bordas inferiores arrendondadas*/
+}
+
+main > h1 {
+    font-family: var(--fonte-android);
+    color: #0b835b; /* Define a cor do título principal */
+    font-size: 22px; /* Define o tamanho da fonte do título principal */
+    
+}
+
+main > h2 {
+    background-image: linear-gradient(to right, #c7f7e8, transparent); /* Cria um gradiente horizontal no subtítulo */
+    color: #0b835b; /* Define a cor do subtítulo */
+    font-size: 16px; /* Define o tamanho da fonte do subtítulo */
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+main > h3 {
+    background-color: #55bb99;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 0px; /* Remove o espaço abaixo do título */
+    
+}
+
+
+main > p {
+    text-align: justify; /* Alinha o texto às margens esquerda e direita */
+    font-size: 13px; /* Define o tamanho da fonte dos parágrafos diretamente dentro de main */
+    text-indent: 30px; /* Adiciona recuo de 30px na primeira linha do parágrafo */
+    line-height: 2em;/*altura da linha*/
+}
+
+
+main strong{
+
+    color: black;
+    font-weight: bold;
+    
+}
+
+img {
+            width: 100%; /*Conteudo se adapta ao tamanho da tela em uso*/
+            display: block; /*Centraliza a imagem*/
+            border-radius: 10px;
+        }
+
+img.pequena{
+    max-width: 300px;
+    margin: auto;/*Centraliza a imagem*/
+}
+
+main a {
+    background-color: rgb(199, 236, 168);
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px 8px rgba(114, 173, 112, 0.075);
+    text-shadow: 0px 5px 10px rgba(19, 104, 16, 0.363);/*sombra do fundo do texto*/
+}
+
+main a::after {
+    content: " 🔗";
+    color: #ffffff; /* Altera a cor do símbolo */
+    text-shadow: 2px 2px 3px rgba(18, 150, 128, 0.062); /* Adiciona sombra */
+}
+
+
+iframe {
+            width: 100%;
+            border-radius: 10px;
+        }        
+
+
+.extra{
+    background-color: #d9f8de;
+    padding: 1px 10px;
+    margin-top: 0px; /* Remove o espaço acima do fundo verde-claro */
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0px 5px 10px rgba(114, 173, 112, 0.363);/*sombra do fundo*/
+    text-indent: 30px; /* Adiciona recuo de 30px na primeira linha do parágrafo */
+}
+
+.versoes {
+    display: grid; /* Ativa o layout CSS Grid para organizar os itens */
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas de mesma largura */
+    grid-template-rows: repeat(7, auto); /* Define sete linhas com altura automática */
+    grid-auto-flow: column; /* Preenche a primeira coluna de cima para baixo e depois a segunda */
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o espaçamento interno padrão da lista */
+    margin: 0; /* Remove a margem externa padrão da lista */
+    font-family: Arial, sans-serif; /* Define a fonte dos itens da lista */
+    font-size: 14px; /* Define o tamanho da fonte dos itens da lista */
+    column-gap: 30px; /* Define o espaço horizontal entre as colunas */
+    row-gap: 12px; /* Define o espaço vertical entre as linhas */
+}
+
+.versoes li::before {
+    content: "✓"; /* Insere o símbolo de certo antes de cada item */
+    margin-right: 5px; /* Define o espaço entre o símbolo e o texto */
+    color: #000; /* Define a cor preta do símbolo */
+}
+
+footer{
+    background-color: #0fa171;/*cor fundo rodapé do site*/
+    color: white;/*cor fonte rodapé do site*/
+    font-size: 12px;/*tamanho fonte rodapé do site*/
+    padding: 4px;/*espaçamento interno rodapé do site*/
+}
+footer>p{
+    text-align: center;/*alinhamento do paragrafo do rodapé do site*/
+    margin: 0px;/*margem do rodapé do site*/
+}
